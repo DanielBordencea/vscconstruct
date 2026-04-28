@@ -70,6 +70,87 @@
       scroll-behavior: smooth;
     }
 
+    /* GDPR Checkbox */
+    .gdpr-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .gdpr-checkbox {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .gdpr-box {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #D7DDE5;
+      background: #fff;
+      margin-top: 2px;
+      transition: border-color .2s ease, background .2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gdpr-checkbox:checked + .gdpr-box {
+      background: #1E3A5F;
+      border-color: #1E3A5F;
+    }
+
+    .gdpr-checkbox:checked + .gdpr-box::after {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 9px;
+      border: 2px solid #fff;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg) translateY(-1px);
+    }
+
+    .gdpr-checkbox:focus + .gdpr-box {
+      box-shadow: 0 0 0 3px rgba(30,58,95,0.15);
+    }
+
+    .gdpr-label:hover .gdpr-box {
+      border-color: #1E3A5F;
+    }
+
+    .gdpr-text {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #4a5568;
+    }
+
+    .gdpr-link {
+      color: #F97316;
+      font-weight: 600;
+      text-decoration: underline;
+      transition: color .2s ease;
+    }
+
+    .gdpr-link:hover {
+      color: #EA6A0A;
+    }
+
+    /* Disabled submit button state */
+    .btn-disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .btn-primary:not(.btn-disabled) {
+      pointer-events: auto;
+    }
+
     body {
       font-family: 'Open Sans', sans-serif;
       color: #2F2F2F;
@@ -908,7 +989,20 @@
               <textarea class="field" id="msg" name="Detalii" rows="5"
                 placeholder="Descrie pe scurt ce ai în minte — suprafață, locație, obiective, buget estimativ..."></textarea>
             </div>
-            <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 pt-2">
+            <!-- GDPR Consent Checkbox -->
+            <div class="sm:col-span-2 pt-2">
+              <label class="gdpr-label" for="gdpr-consent">
+                <input type="checkbox" id="gdpr-consent" name="gdpr_consent" class="gdpr-checkbox" required>
+                <span class="gdpr-box" aria-hidden="true"></span>
+                <span class="gdpr-text">
+                  Sunt de acord cu prelucrarea datelor mele personale (nume, email, telefon, detalii proiect)
+                  în scopul de a fi contactat(ă) cu privire la solicitarea trimisă. Am citit și înțeles
+                  <a href="politica-confidentialitate.html" target="_blank" class="gdpr-link">Politica de confidențialitate</a>.
+                </span>
+              </label>
+            </div>
+
+            <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
               <p class="text-sm text-brand-graphite/65 flex items-center gap-2">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-brand-orange flex-shrink-0">
                   <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 5v5l3 3" stroke="currentColor" stroke-width="2"
@@ -916,7 +1010,7 @@
                 </svg>
                 Te contactăm în <strong class="text-brand-navy">maxim 24h</strong>
               </p>
-              <button type="submit" class="btn-primary">
+              <button type="submit" id="submit-btn" class="btn-primary btn-disabled" disabled>
                 Trimite solicitarea
                 <span class="arrow"><svg width="16" height="12" viewBox="0 0 16 12" fill="none">
                     <path d="M1 6h14m0 0L10 1m5 5l-5 5" stroke="currentColor" stroke-width="2" />
@@ -949,6 +1043,7 @@
         <a href="#proiecte" class="hover:text-brand-orange transition-colors">Proiecte</a>
         <a href="Blog.html" class="hover:text-brand-orange transition-colors">Blog</a>
         <a href="#contact" class="hover:text-brand-orange transition-colors">Contact</a>
+        <a href="politica-confidentialitate.html" class="hover:text-brand-orange transition-colors">Politică confidențialitate</a>
       </nav>
 
       <div class="text-sm text-white/50 md:text-right">
@@ -956,6 +1051,25 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function() {
+      var checkbox = document.getElementById('gdpr-consent');
+      var btn = document.getElementById('submit-btn');
+
+      if (checkbox && btn) {
+        checkbox.addEventListener('change', function() {
+          if (this.checked) {
+            btn.disabled = false;
+            btn.classList.remove('btn-disabled');
+          } else {
+            btn.disabled = true;
+            btn.classList.add('btn-disabled');
+          }
+        });
+      }
+    })();
+  </script>
 
 </body>
 

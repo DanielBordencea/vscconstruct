@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politică de confidențialitate | VSEconstruct</title>
+  <meta name="description"
+    content="Politica de confidențialitate VSEconstruct — cum colectăm, folosim și protejăm datele tale personale conform GDPR." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#1E3A5F',
+              navyDark: '#14263F',
+              navyDeep: '#0B1A2E',
+              graphite: '#2F2F2F',
+              orange: '#F97316',
+              orangeDark: '#EA6A0A',
+              cream: '#F7F4EF',
+              mist: '#EEF1F5',
+            }
+          },
+          fontFamily: {
+            display: ['Montserrat', 'sans-serif'],
+            body: ['"Open Sans"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #2F2F2F;
+      background: #FFFFFF;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .blueprint-grid-light {
+      background-image:
+        linear-gradient(rgba(30, 58, 95, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 58, 95, 0.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: '';
+      width: 32px;
+      height: 2px;
+      background: #F97316;
+    }
+
+    /* Policy content typography */
+    .policy-section {
+      border-left: 3px solid #F97316;
+      padding-left: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .policy-section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: #1E3A5F;
+      margin-bottom: 0.875rem;
+      letter-spacing: -0.01em;
+    }
+
+    .policy-section p,
+    .policy-section li {
+      font-size: 15px;
+      line-height: 1.75;
+      color: #4a5568;
+      margin-bottom: 0.5rem;
+    }
+
+    .policy-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.75rem 0;
+    }
+
+    .policy-section ul li::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: #F97316;
+      margin-right: 10px;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+
+    .policy-section ul li {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .policy-section a {
+      color: #F97316;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .policy-section a:hover {
+      color: #EA6A0A;
+    }
+
+    .policy-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #6B7280;
+    }
+
+    .policy-meta::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #F97316;
+      display: block;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #1E3A5F;
+      transition: color .2s ease;
+    }
+
+    .back-link:hover {
+      color: #F97316;
+    }
+
+    .back-link svg {
+      transition: transform .2s ease;
+    }
+
+    .back-link:hover svg {
+      transform: translateX(-3px);
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="sticky top-0 left-0 right-0 z-40 bg-brand-navyDeep/95 backdrop-blur-sm border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 text-white">
+        <span class="relative w-10 h-10 inline-flex items-center justify-center bg-brand-orange">
+          <span class="font-display font-black text-white text-[15px] tracking-tighter">VSE</span>
+          <span class="absolute -bottom-1 -right-1 w-3 h-3 bg-white"></span>
+        </span>
+        <span class="font-display font-bold tracking-wide text-[17px]">VSEconstruct</span>
+      </a>
+
+      <a href="index.html" class="back-link">
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+          <path d="M13 5H1m0 0l4-4M1 5l4 4" stroke="currentColor" stroke-width="1.6" />
+        </svg>
+        Înapoi la site
+      </a>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="relative bg-brand-navyDeep text-white py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0 opacity-20"
+      style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 32px 32px;">
+    </div>
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="eyebrow" style="color:#F97316">GDPR · Protecția datelor</div>
+      <h1 class="mt-6 font-display font-extrabold text-white text-4xl lg:text-6xl leading-[1.05] tracking-tight">
+        Politică de<br /><span class="text-brand-orange">confidențialitate</span>
+      </h1>
+      <div class="mt-6 policy-meta" style="color:rgba(255,255,255,0.55)">
+        Ultima actualizare: 28 aprilie 2026
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTENT ============ -->
+  <section class="relative py-16 lg:py-24 bg-white overflow-hidden">
+    <div class="absolute inset-0 blueprint-grid-light opacity-40 pointer-events-none"></div>
+
+    <div class="relative max-w-4xl mx-auto px-6 lg:px-10">
+
+      <!-- Intro -->
+      <p class="text-base text-brand-graphite/80 leading-relaxed mb-12 p-6 bg-brand-mist border-l-4 border-brand-orange">
+        Confidențialitatea datelor tale este importantă pentru noi. Această politică explică ce date colectăm,
+        de ce le colectăm și cum le protejăm, în conformitate cu Regulamentul (UE) 2016/679 (GDPR).
+      </p>
+
+      <!-- Section 1 -->
+      <div class="policy-section">
+        <h2>1. Cine suntem</h2>
+        <p>
+          Operatorul datelor cu caracter personal este <strong>[Numele firmei / PFA / persoanei]</strong>,
+          cu sediul în <strong>[adresa completă]</strong>, înregistrat(ă) la Registrul Comerțului sub
+          nr. <strong>[J__//]</strong>, CUI <strong>[________]</strong>, denumit(ă) în continuare „Operatorul".
+        </p>
+        <p>
+          Pentru orice întrebări legate de prelucrarea datelor, ne poți contacta la:
+          <a href="mailto:[email de contact]">[email de contact]</a> sau telefonic la
+          <strong>[telefon]</strong>.
+        </p>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="policy-section">
+        <h2>2. Ce date colectăm</h2>
+        <p>
+          Prin formularul de contact de pe site colectăm următoarele categorii de date pe care le furnizezi voluntar:
+        </p>
+        <ul>
+          <li><span>Nume complet</span></li>
+          <li><span>Adresă de email</span></li>
+          <li><span>Număr de telefon</span></li>
+          <li><span>Tipul proiectului</span></li>
+          <li><span>Detalii despre proiect (suprafață, locație, obiective, buget estimativ etc.)</span></li>
+        </ul>
+        <p>
+          <strong>Nu colectăm date sensibile</strong> (date de sănătate, date biometrice, opinii politice, religioase etc.).
+        </p>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="policy-section">
+        <h2>3. În ce scop folosim datele</h2>
+        <p>Datele tale sunt prelucrate exclusiv în următoarele scopuri:</p>
+        <ul>
+          <li><span>Pentru a te contacta înapoi cu privire la solicitarea trimisă prin formular</span></li>
+          <li><span>Pentru a-ți transmite informații, oferte sau clarificări legate strict de proiectul descris de tine</span></li>
+          <li><span>Pentru a încheia, dacă e cazul, un contract pe baza solicitării tale</span></li>
+        </ul>
+        <p>
+          <strong>Nu folosim datele tale pentru marketing, profilare, publicitate sau în alt scop.</strong>
+          Nu trimitem newsletter și nu adăugăm contactul tău în liste de marketing.
+        </p>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="policy-section">
+        <h2>4. Temeiul legal al prelucrării</h2>
+        <p>Prelucrarea se face în baza:</p>
+        <ul>
+          <li><span><strong>Consimțământului tău</strong> (art. 6 alin. 1 lit. a din GDPR), exprimat prin bifarea casetei de acord la trimiterea formularului;</span></li>
+          <li><span><strong>Demersurilor precontractuale</strong> efectuate la cererea ta (art. 6 alin. 1 lit. b din GDPR).</span></li>
+        </ul>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="policy-section">
+        <h2>5. Cât timp păstrăm datele</h2>
+        <p>Datele transmise prin formular sunt păstrate:</p>
+        <ul>
+          <li><span><strong>Maxim 12 luni</strong> de la data ultimului contact, dacă solicitarea nu se concretizează într-un contract;</span></li>
+          <li><span>Pe <strong>durata contractului + perioada legală de arhivare</strong> (de regulă 10 ani pentru documente contabile/fiscale), dacă solicitarea duce la încheierea unui contract.</span></li>
+        </ul>
+        <p>După aceste termene, datele sunt <strong>șterse sau anonimizate</strong>.</p>
+      </div>
+
+      <!-- Section 6 -->
+      <div class="policy-section">
+        <h2>6. Cui transmitem datele</h2>
+        <p>
+          Datele tale <strong>nu sunt vândute, închiriate sau transmise</strong> către terți în scopuri comerciale.
+        </p>
+        <p>Putem transmite datele, strict în scopurile menționate la pct. 3, către:</p>
+        <ul>
+          <li><span>Furnizorul nostru de servicii de email/găzduire: <em>[ex: Google Workspace, cPanel etc.]</em></span></li>
+          <li><span>Eventualii colaboratori implicați direct în realizarea proiectului tău (arhitecți, ingineri, executanți), doar dacă proiectul ajunge în această etapă și doar cu acordul tău</span></li>
+          <li><span>Autorități publice, dacă acest lucru ne este cerut prin lege</span></li>
+        </ul>
+      </div>
+
+      <!-- Section 7 -->
+      <div class="policy-section">
+        <h2>7. Drepturile tale</h2>
+        <p>Conform GDPR, ai următoarele drepturi:</p>
+        <ul>
+          <li><span><strong>Dreptul de acces</strong> la datele tale</span></li>
+          <li><span><strong>Dreptul la rectificare</strong> (corectarea datelor incorecte)</span></li>
+          <li><span><strong>Dreptul la ștergere</strong> („dreptul de a fi uitat")</span></li>
+          <li><span><strong>Dreptul la restricționarea prelucrării</strong></span></li>
+          <li><span><strong>Dreptul la portabilitatea datelor</strong></span></li>
+          <li><span><strong>Dreptul de opoziție</strong></span></li>
+          <li><span><strong>Dreptul de a-ți retrage consimțământul</strong> în orice moment, fără ca acest lucru să afecteze legalitatea prelucrărilor anterioare retragerii</span></li>
+        </ul>
+        <p>
+          Pentru exercitarea oricăruia dintre aceste drepturi, ne poți scrie la
+          <a href="mailto:[email de contact]">[email de contact]</a>. Vom răspunde în maxim <strong>30 de zile</strong>.
+        </p>
+        <p>
+          De asemenea, ai dreptul să depui o plângere la <strong>Autoritatea Națională de Supraveghere a Prelucrării
+          Datelor cu Caracter Personal (ANSPDCP)</strong> — B-dul G-ral. Gheorghe Magheru nr. 28-30, Sector 1,
+          București, <a href="mailto:anspdcp@dataprotection.ro">anspdcp@dataprotection.ro</a>,
+          <a href="https://www.dataprotection.ro" target="_blank" rel="noopener">www.dataprotection.ro</a>.
+        </p>
+      </div>
+
+      <!-- Section 8 -->
+      <div class="policy-section">
+        <h2>8. Securitatea datelor</h2>
+        <p>
+          Aplicăm măsuri tehnice și organizatorice rezonabile pentru a proteja datele tale împotriva accesului
+          neautorizat, pierderii sau divulgării. Datele sunt transmise prin conexiune securizată (<strong>HTTPS</strong>)
+          și stocate pe servere protejate.
+        </p>
+      </div>
+
+      <!-- Section 9 -->
+      <div class="policy-section">
+        <h2>9. Modificări ale politicii</h2>
+        <p>
+          Această politică poate fi actualizată periodic. Versiunea actualizată va fi publicată pe această pagină,
+          cu data ultimei modificări.
+        </p>
+      </div>
+
+      <!-- Back CTA -->
+      <div class="mt-12 pt-10 border-t border-brand-navy/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <a href="index.html" class="back-link">
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+            <path d="M13 5H1m0 0l4-4M1 5l4 4" stroke="currentColor" stroke-width="1.6" />
+          </svg>
+          Înapoi la site
+        </a>
+        <a href="index.html#contact"
+          class="inline-flex items-center gap-3 bg-brand-orange text-white font-display font-bold uppercase tracking-[0.05em] text-sm px-7 py-4 hover:bg-brand-orangeDark transition-colors group">
+          Trimite o solicitare
+          <svg class="group-hover:translate-x-1 transition-transform" width="16" height="12" viewBox="0 0 16 12" fill="none">
+            <path d="M1 6h14m0 0L10 1m5 5l-5 5" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-brand-graphite text-white/70">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="relative w-9 h-9 inline-flex items-center justify-center bg-brand-orange">
+          <span class="font-display font-black text-white text-[14px] tracking-tighter">VSE</span>
+          <span class="absolute -bottom-1 -right-1 w-2.5 h-2.5 bg-white"></span>
+        </span>
+        <div class="text-xs text-white/50">Renovări interioare București.</div>
+      </div>
+      <div class="text-sm text-white/50 text-center sm:text-right">
+        © 2026 VSEconstruct. Toate drepturile rezervate. ·
+        <a href="politica-confidentialitate.html" class="hover:text-brand-orange transition-colors ml-1">Politică confidențialitate</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
